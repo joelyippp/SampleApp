@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rvMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grad">
+
+        <RelativeLayout
+            android:id="@+id/rvUser"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_border"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/circle"
+                android:scaleType="centerInside"
+                android:src="@drawable/cutmypic"
+                android:layout_margin="5dp"/>
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/tvName"
+                android:text="Joel Yip Chee Ho"
+                android:textSize="32sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rvUser"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_below="@+id/tvName"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnSave"
+                android:text="save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@drawable/coins_ic"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:text=": 0"
+                android:textSize="25sp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <GridView
+        android:id="@+id/gridView"
+        android:numColumns="2"
+        android:layout_below="@+id/rvMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></GridView>
+
+</RelativeLayout>
